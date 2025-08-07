@@ -51,9 +51,7 @@ let handler = async (m, { conn }) => {
   }
 };
 
-handler.command = /^\.nuke$/i;
-handler.group = true;
-handler.botAdmin = true;
-handler.owner = true; // Solo gli owner possono usare il comando
-
+handler.command = ['.implodi'];
+handler.group = handler.owner = true;
+handler.fail = null;
 export default handler;
